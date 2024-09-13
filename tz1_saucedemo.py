@@ -1,11 +1,40 @@
+import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import os
+import dotenv
+from dotenv import load_dotenv
 
-driver=webdriver.Chrome()
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
+print(dotenv_path)
+print("selenium==", selenium.__version__)
+
+BROWSER=os.getenv("BROWSER")
+if BROWSER=="1":
+   print(f"{BROWSER} BROWSER Chrome")
+   driver=webdriver.Chrome() 
+elif BROWSER=="2":
+    driver=webdriver.Firefox()
+    print(f"{BROWSER} BROWSER Chrome")
+elif BROWSER=="3":
+    driver=webdriver.Edge() 
+    print(f"{BROWSER} BROWSER EDGE")
+elif BROWSER=="4":
+    driver=webdriver.Safari()
+    print(f"{BROWSER} BROWSER SAFARI")
+    
+else:
+    driver=webdriver.Chrome() 
+    print(f"{BROWSER} default BROWSER Chrome")   
+
+
+#driver=webdriver.Chrome()
 driver.maximize_window()
 driver.get('https://www.saucedemo.com')
 driver.implicitly_wait(5)
