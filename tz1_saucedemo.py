@@ -21,7 +21,7 @@ if BROWSER=="1":
    driver=webdriver.Chrome() 
 elif BROWSER=="2":
     driver=webdriver.Firefox()
-    print(f"{BROWSER} BROWSER Chrome")
+    print(f"{BROWSER} BROWSER Firefox")
 elif BROWSER=="3":
     driver=webdriver.Edge() 
     print(f"{BROWSER} BROWSER EDGE")
@@ -93,7 +93,7 @@ if(header_txt== 'Thank you for your order!' and delivery_txt== 'Your order has b
 else:
     print('Error, test failed')
 
-
+driver.quit()
 #continue
 #finish
 #div.summary_total_label
