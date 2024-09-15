@@ -3,8 +3,7 @@
 файл tz1_saucedemo.py для запуска теста сайта https://www.saucedemo.com в режиме implicit wait
 
 ## Системные требования
-	* selenium == 4.21.0
-	* Python >= 3.8.10
+	Windows 10 или Ubuntu >=20
 ## Установка и запуск
 Скопировать файлы в директорию.
 Установка окружения путем запуска в командной строке:
@@ -28,6 +27,7 @@ python tz1_saucedemo_expl_wait.py
 ```sh
 python tz1_saucedemo.py
 ```
+Команда "python", возможно, в виде "python3".
 
 
     
